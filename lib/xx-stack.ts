@@ -1,16 +1,25 @@
-import * as cdk from 'aws-cdk-lib';
+import { BundlingFileAccess, Stack, StackProps } from 'aws-cdk-lib';
+import { Architecture } from 'aws-cdk-lib/aws-lambda';
+import { NodejsFunction, OutputFormat, SourceMapMode } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
+import { join } from 'path';
 
-export class XxStack extends cdk.Stack {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+
+export class XxStack extends Stack {
+  constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    // The code that defines your stack goes here
+    const nodeF = new NodejsFunction(this, 'xx', {
+      handler: 'handler',
+      entry: join(__dirname, 'lambda/xx.ts'),
+      architecture: Architecture.ARM_64,
+      bundling: {
+        format: OutputFormat.ESM,
+        target: 'es2020',
+        sourceMap: true,
+        sourceMapMode: SourceMapMode.INLINE 
+      }
 
-    // example resource
-    // const queue = new sqs.Queue(this, 'XxQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
+    })
   }
 }
