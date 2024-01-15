@@ -15,10 +15,10 @@
       </list>
     </option>
   </component>
-  <component name="connectionManager">
-    <option name="activeConnectionId" value="AwsConnectionManagerConnection" />
-  </component>
   <component name="explorerToolWindow">
     <option name="selectedTab" value="Amazon Q + CodeWhisperer" />
+  </component>
+  <component name="lambda">
+    <option name="showAllHandlerGutterIcons" value="true" />
   </component>
 </project>

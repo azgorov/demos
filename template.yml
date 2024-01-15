@@ -25,7 +25,7 @@ Resources:
       Code:
         S3Bucket:
           Fn::Sub: cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}
-        S3Key: fe4eb9a4d49b41b2b847f313e594579aee5281f60f3655b36b1a67caff74a1b3.zip
+        S3Key: 494325ce081b1d56eca9757238468014df0442a53c07341f158a22fdd2199d83.zip
       Environment:
         Variables:
           AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1"
@@ -39,7 +39,7 @@ Resources:
       - xxServiceRoleEA518023
     Metadata:
       aws:cdk:path: XxStack/xx/Resource
-      aws:asset:path: /Users/kalinazgorov/Desktop/projects/tmp/xx/cdk.out/asset.fe4eb9a4d49b41b2b847f313e594579aee5281f60f3655b36b1a67caff74a1b3
+      aws:asset:path: /Users/kalinazgorov/Desktop/projects/tmp/demos/cdk.out/asset.494325ce081b1d56eca9757238468014df0442a53c07341f158a22fdd2199d83
       aws:asset:is-bundled: true
       aws:asset:property: Code
   CDKMetadata:

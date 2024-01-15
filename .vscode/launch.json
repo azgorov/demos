@@ -24,9 +24,8 @@
             "request": "attach",
             "address": "localhost",
             "port": 5858,
-            "localRoot": "${workspaceRoot}",
-            "remoteRoot": "/var/task",
-            "protocol": "inspector"
+            "localRoot": "${workspaceRoot}/cdk.out/asset.494325ce081b1d56eca9757238468014df0442a53c07341f158a22fdd2199d83/",
+            "remoteRoot": "/var/task"
         }
     ]
-}
+} 

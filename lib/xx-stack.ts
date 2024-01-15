@@ -15,9 +15,12 @@ export class XxStack extends Stack {
       architecture: Architecture.ARM_64,
       bundling: {
         format: OutputFormat.ESM,
-        target: 'es2020',
+        preCompilation: true,
+        forceDockerBundling: true,
+        // target: 'es2020',
         sourceMap: true,
-        sourceMapMode: SourceMapMode.INLINE 
+        sourceMapMode: SourceMapMode.INLINE,
+        tsconfig: join(__dirname, 'lambda/tsconfig.lambda.json'),
       }
 
     })
