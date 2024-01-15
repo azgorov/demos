@@ -14,13 +14,13 @@ export class XxStack extends Stack {
       entry: join(__dirname, 'lambda/xx.ts'),
       architecture: Architecture.ARM_64,
       bundling: {
-        format: OutputFormat.ESM,
+       // format: OutputFormat.ESM,
         preCompilation: true,
-        forceDockerBundling: true,
+        forceDockerBundling: false,
         // target: 'es2020',
         sourceMap: true,
         sourceMapMode: SourceMapMode.INLINE,
-        tsconfig: join(__dirname, 'lambda/tsconfig.lambda.json'),
+        //tsconfig: join(__dirname, 'lambda/tsconfig.lambda.json'),
       }
 
     })
